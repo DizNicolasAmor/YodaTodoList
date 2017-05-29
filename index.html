@@ -1,0 +1,72 @@
+<!--
+YodaTodoList
+- - - - - - - - - -
+My first angularjs project. 
+https://diznicolasamor.github.io/
+See this project in GitHub (https://github.com/DizNicolasAmor)
+- - - - - - 
+It is a todo list builded with angularjs and a local storage service. 
+You write the tasks you must do and they are stored in Yoda's language. 
+Be free to use it and change it. 
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="YodaTodoList">
+ <head>
+ 	<title>YodaTodoList</title>
+ 	<meta charset="UTF-8" />
+    <meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--my css file-->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+
+    <!-- angularjs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.2/angular-local-storage.min.js"></script>﻿
+	<script src="YodaTodoController.js"></script>
+ </head>
+
+ <body ng-controller="YodaTodoController">
+ 	<h1 id="title">YODA TODO LIST</h1>
+
+ 	<div class="container" ng-app="YodaTodoList">
+ 	  <div class="todo-wrapper text-center" ng-controller="YodaTodoController">
+
+    <h3>I must...</h3>
+   	  <tr>
+        <td><input id="inputText" type="text" Placeholder="Enter task" ng-model="input"/></td>
+         <td><button class="btn addButton" ng-click="addToDo()">+</button></td>
+         <td>
+          <span class="app-icon fa-stack fa-2x" data-count={{totalToDo()}}>
+           <i class="fa fa-square fa-stack-2x"></i>
+           <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+          </span>
+         </td>
+      </tr>
+      <p class="error">{{error}}</p>
+
+ 	    <div class="todo text-left">
+ 	    <ul class="nav" >
+        <li ng-repeat="todo in todos">
+          <div id="itemWrapper">
+            <input type="checkbox" ng-model="todo.done"/>
+            <span class="todo-{{todo.done}}">{{todo.text}}</span>
+         </div>
+        </li>
+      </ul>
+      </div>
+      
+      <button class="btn clearButton" ng-click="clearCompleted()"><i class="fa fa-trash-o icon"></i>   CLEAR COMPLETED</button>
+
+    </div>
+
+ </body>
+</html>
