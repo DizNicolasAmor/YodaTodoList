@@ -22,7 +22,7 @@ body:before {
   height: 100%; 
   z-index: -10;
   background-color: black; 
-  background: url(yoda.jpg) no-repeat center center;
+  background: url("https://c1.staticflickr.com/4/3645/3343464749_6d89deb528_b.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
