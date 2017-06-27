@@ -2,7 +2,7 @@
 YodaTodoList
 - - - - - - - - - -
 My first angularjs project. 
-https://diznicolasamor.github.io/
+https://diznicolasamor.github.io/YodaTodoList/
 See this project in GitHub (https://github.com/DizNicolasAmor)
 Be free to use it and change it. 
 - - - - - - 
@@ -20,8 +20,8 @@ angular.module("YodaTodoList",["LocalStorageModule"])
   }
   else{
     s.todos = [
-                  {"text": "Follow your passion", done: false},
-                  {"text": "Do some exercise", done: false}
+                  {"text": "YOUR PASSION FOLLOW YOU MUST.", done: false},
+                  {"text": "EXERCISE DO SOME YOU MUST.", done: false}
                 ];
   }
 
