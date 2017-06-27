@@ -59,8 +59,12 @@ angular.module("YodaTodoList",["LocalStorageModule"])
       return array;
     }
 
+
+    //toUpperCase();
+    s.input = s.input.toUpperCase();
+
     //shuffle the input because this is how Yoda speaks
-    s.input = shuffle(s.input.split(" ")).join(" ")  + " you must. ";
+    s.input = shuffle(s.input.split(" ")).join(" ")  + " YOU MUST. ";
 
     s.todos.push({"text":s.input,"done":false});
 	  s.error ="";
