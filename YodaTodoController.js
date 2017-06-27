@@ -20,8 +20,8 @@ angular.module("YodaTodoList",["LocalStorageModule"])
   }
   else{
     s.todos = [
-                  {"text": "Follow your passion", done: false},
-                  {"text": "Do some exercise", done: false}
+                  {"text": "YOUR PASSION FOLLOW YOU MUST.", done: false},
+                  {"text": "EXERCISE DO SOME YOU MUST.", done: false}
                 ];
   }
 
