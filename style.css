@@ -2,7 +2,7 @@
 YodaTodoList
 - - - - - - - - - -
 My first angularjs project. 
-https://diznicolasamor.github.io/
+https://diznicolasamor.github.io/YodaTodoList/
 See this project in GitHub (https://github.com/DizNicolasAmor)
 Be free to use it and change it. 
 - - - - - - 
